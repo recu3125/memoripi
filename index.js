@@ -52,6 +52,11 @@ function init() {
         event.preventDefault();
       }
     });
+    inputs[i].addEventListener('keydown', function (event) {
+      if (event.keyCode === 9) { // space
+        event.preventDefault();
+      }
+    });
   }
   document.getElementsByTagName('td')[2].getElementsByTagName('input')[0].focus()
 }

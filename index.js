@@ -1,5 +1,6 @@
 var nowdigit = 0
 var mistake = 5
+var dotick = true
 
 function init() {
   document.addEventListener('mousedown', function (event) {
@@ -87,7 +88,8 @@ function showone() {
 }
 
 function showanswer() {
-  clearInterval(test)
+  dotick = false
+  console.log('A')
   var cells = document.getElementsByTagName('td');
   for (var i = 0; i < cells.length; i++) {
     var input = cells[i].getElementsByTagName('input')[0];
@@ -99,6 +101,9 @@ function showanswer() {
 var test = setInterval(tick, 10);
 
 function tick() {
+  if (!dotick) {
+    return
+  }
   if (document.activeElement.tagName != 'INPUT') {
     return
   }
@@ -128,5 +133,5 @@ function restart() {
   nowdigit = 0
   mistake = 5
   init();
-  test = setInterval(tick, 10);
+  dotick = true
 }

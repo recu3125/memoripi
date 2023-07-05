@@ -131,10 +131,10 @@ function tick() {
 
 function restart() {
   document.body.innerHTML = `
-  <p id="ui" onclick="restart()" style="background-color: #DDDDDD; border: #DDDDDD solid 50px; margin: 0px; margin-left:auto; margin-right: auto; width: fit-content; font-size: 40pt;">0번째 자리 입력 중, 기회 5번 남음</p>
-  <table id="myTable" style="margin: auto;">
+  <p id="ui" onclick="restart()">0번째 자리 입력 중, 기회 5번 남음</p>
+  <table id="myTable">
     <tbody></tbody>
-  </table>';`
+  </table>`
   nowdigit = 0
   mistake = 5
   init();

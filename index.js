@@ -93,6 +93,7 @@ function showone() {
 }
 
 function showanswer() {
+  document.getElementById('ui').textContent = "클릭해서 재시작"
   dotick = false
   console.log('A')
   var cells = document.getElementsByTagName('td');
@@ -124,7 +125,6 @@ function tick() {
     document.getElementById('ui').textContent = `${nowdigit}번째 자리 입력 중, 기회 ${mistake}번 남음`
     if (mistake <= 0) {
       showanswer()
-      document.getElementById('ui').textContent = "클릭해서 재시작"
     }
   }
 }
